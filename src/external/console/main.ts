@@ -1,5 +1,5 @@
 import TermSpanishEnglishService from "../../domain/application/termSpanishEnglishService";
-// import TermSpanishEnglish from "../../domain/model/termSpanishEnglish";
+import TermSpanishEnglish from "../../domain/model/termSpanishEnglish";
 import InMemoryTermSpanishEnglishRepository from "../persistence/inMemoryTermSpanishEnglishRepository";
 
 export default class Main {
@@ -11,18 +11,18 @@ export default class Main {
         const service = new TermSpanishEnglishService(termSpanishEnglishRepository);
 
 				// get all terms
-				console.log('Searching terms...');
-        console.log(await service.getAllTerms());
+				// console.log('Searching terms...');
+        // console.log(await service.getAllTerms());
 
 				// create new terms spanish - english
-				// console.log('Creating term...');
+				console.log('Creating term...');
 				
-        // await service.createTermSpanishEnglish(new TermSpanishEnglish("hola", "hello"));
+        await service.createTermSpanishEnglish(new TermSpanishEnglish("libro", "book"));
         // await service.createTermSpanishEnglish(new TermSpanishEnglish("arbol", "tree"));
         // await service.createTermSpanishEnglish(new TermSpanishEnglish("yellow", "amarillo"));
         // await service.createTermSpanishEnglish(new TermSpanishEnglish("oso", "bear"));
 
-				// console.log('Created success!!!');
+				console.log('Created success!!!');
 				
 
 				// get terms spanish -english
